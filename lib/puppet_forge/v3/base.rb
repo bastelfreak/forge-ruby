@@ -66,6 +66,8 @@ module PuppetForge
             uri_path = "v3/#{resource}/#{item}"
           end
 
+          puts "uri_path is: #{uri_path}"
+          puts "params is: #{params}"
           PuppetForge::V3::Base.conn.get uri_path, params
         end
 
